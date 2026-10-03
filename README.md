@@ -5,8 +5,10 @@ This repository is a [Homebrew](https://brew.sh) tap for
 analysis of quantum-chemical and crystallographic data in molecules and
 solids. It installs the latest critic2 release, including the graphical
 interface, together with all its dependencies. On Apple Silicon Macs with
-macOS 14 or newer and Intel Macs with macOS 15 or newer, Homebrew downloads
-a prebuilt critic2 (a "bottle"); on older systems it compiles it.
+macOS 15 or newer, Homebrew downloads a prebuilt critic2 (a "bottle"). On
+Intel Macs and older macOS versions, for which Homebrew no longer provides
+prebuilt packages, it compiles critic2 and the libraries it needs (gcc
+among them), which can take a few hours.
 
 ## Installation
 
@@ -120,7 +122,9 @@ attaching the logs and the output of `brew config`.
    ```
 
 3. Open a pull request. The `brew test-bot` workflow builds and tests the
-   bottles on macOS 14 (Apple Silicon) and macOS 15 (Intel).
+   bottle on macOS 15 (Apple Silicon). Check that the job log shows critic2
+   being built: when a dependency has no bottle, test-bot skips the formula
+   and still reports success, and there is then nothing to publish.
 4. When it passes, run the `brew pr-pull` workflow (Actions tab, "Run
    workflow", with the pull request number). It uploads the bottles to the
    GitHub Packages of this repository, adds the `bottle do` block to the

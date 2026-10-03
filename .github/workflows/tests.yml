@@ -15,12 +15,15 @@ defaults:
 jobs:
   test-bot:
     strategy:
-      # Bottles for Apple Silicon (built on macOS 14, they also install on
-      # every later macOS) and Intel Macs. Linux users get the AppImage from
-      # the critic2 releases instead.
+      # One bottle, for Apple Silicon: built on macOS 15, it also installs on
+      # every later macOS. It has to be the oldest macOS that homebrew-core
+      # still bottles (arm64 15, 26 and 27 as of October 2026): test-bot
+      # silently skips a formula whose dependencies have no bottles, which
+      # is also why there is no Intel bottle. Linux users get the AppImage
+      # from the critic2 releases instead.
       fail-fast: false
       matrix:
-        os: [ macos-14, macos-15-intel ]
+        os: [ macos-15 ]
     runs-on: ${{ matrix.os }}
     permissions:
       actions: read
