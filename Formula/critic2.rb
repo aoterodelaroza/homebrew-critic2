@@ -4,8 +4,8 @@ class Critic2 < Formula
   # a tagged critic2 release; ./bump.sh <tag> updates url and sha256.
   # The prebuilt bottles are for this version; "brew install --HEAD"
   # compiles the current master branch instead.
-  url "https://github.com/aoterodelaroza/critic2/archive/refs/tags/RELEASE_TAG.tar.gz"
-  sha256 "RELEASE_SHA256"
+  url "https://github.com/aoterodelaroza/critic2/archive/refs/tags/1.4.tar.gz"
+  sha256 "5709878a283e963da32be6bcee0f49f18404bfd9f399e04a569b58beae255706"
   license "GPL-3.0-or-later"
   head "https://github.com/aoterodelaroza/critic2.git", branch: "master"
 
