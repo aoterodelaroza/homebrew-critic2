@@ -14,13 +14,13 @@ a prebuilt critic2 (a "bottle"); on older systems it compiles it.
    steps" it prints at the end (they add Homebrew to your `PATH`). The
    installer also installs Apple's command line tools if they are missing:
 
-   ```
+   ```sh
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
 2. Install critic2:
 
-   ```
+   ```sh
    brew install aoterodelaroza/critic2/critic2
    ```
 
@@ -42,7 +42,7 @@ critic2 is used from the terminal (Terminal.app, iTerm2, ...) in the same
 way as on Linux. The program is driven by an input file with keywords
 (usually with extension `.cri`):
 
-```
+```sh
 critic2 input.cri              # output to the screen
 critic2 input.cri output.cro   # output to a file
 critic2                        # interactive mode; exit with "end" or Ctrl-D
@@ -50,7 +50,7 @@ critic2                        # interactive mode; exit with "end" or Ctrl-D
 
 To start the graphical interface, optionally opening one or more files:
 
-```
+```sh
 critic2 -g
 critic2 -g structure.cif
 ```
@@ -72,14 +72,14 @@ Some notes:
   as many threads as performance cores (4 on an M1). Add, for instance, to
   your `~/.zprofile`:
 
-  ```
+  ```sh
   export OMP_NUM_THREADS=4
   ```
 
 - **Size of the GUI.** The interface is sized according to the display
   scale. To make it larger or smaller, set the `CRITIC2_UI_SCALE` variable:
 
-  ```
+  ```sh
   CRITIC2_UI_SCALE=1.25 critic2 -g
   ```
 
@@ -90,7 +90,7 @@ Some notes:
 
 ## Updating and uninstalling
 
-```
+```sh
 brew upgrade                               # update critic2 (and everything else)
 brew uninstall critic2                     # remove critic2
 brew untap aoterodelaroza/critic2          # remove this tap
@@ -113,7 +113,7 @@ attaching the logs and the output of `brew config`.
    (its own workflow builds the Windows and Linux packages).
 2. Here, on a new branch, point the formula at the tag and push the branch:
 
-   ```
+   ```sh
    git switch -c critic2-<tag>
    ./bump.sh <tag>
    git commit -am "critic2 <tag>" && git push -u origin critic2-<tag>

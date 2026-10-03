@@ -20,7 +20,7 @@ class Critic2 < Formula
   depends_on "readline"
 
   def install
-    ENV["FC"] = Formula["gcc"].opt_bin/"gfortran"
+    ENV["FC"] = formula_opt_bin("gcc")/"gfortran"
     args = %w[
       -DENABLE_GUI=ON
       -DBUILD_TESTING=OFF
