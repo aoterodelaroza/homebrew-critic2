@@ -9,6 +9,12 @@ class Critic2 < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/aoterodelaroza/critic2.git", branch: "master"
 
+  bottle do
+    root_url "https://ghcr.io/v2/aoterodelaroza/critic2"
+    rebuild 1
+    sha256 cellar: :any, arm64_sequoia: "91e77132c7d4e5dff63d1e3e37bae45f601eabcd426a7da63297a951458c273e"
+  end
+
   depends_on "cmake" => :build
   depends_on "freetype"
   depends_on "gcc" # gfortran, libgfortran, libgomp
