@@ -4,8 +4,8 @@
 class Critic2 < Formula
   desc "Analysis of quantum-chemical and crystallographic data in molecules and solids"
   homepage "https://aoterodelaroza.github.io/critic2/"
-  url "https://github.com/aoterodelaroza/critic2/archive/refs/tags/1.4.tar.gz"
-  sha256 "5709878a283e963da32be6bcee0f49f18404bfd9f399e04a569b58beae255706"
+  url "https://github.com/aoterodelaroza/critic2/archive/refs/tags/1.5.tar.gz"
+  sha256 "b965cb1d7e7302518160343986c80fea29189fc1a26af64796ae99dae59507e9"
   license "GPL-3.0-or-later"
   head "https://github.com/aoterodelaroza/critic2.git", branch: "master"
 
