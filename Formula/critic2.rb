@@ -11,7 +11,7 @@ class Critic2 < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/aoterodelaroza/critic2"
-    sha256 cellar: :any, arm64_sequoia: "0051885674a2f8f4ee4ec6be84d175db085b46a4d73c40bfbe2ea1babd6131fd"
+    sha256 cellar: :any, arm64_sequoia: "65ffed0258bb461faba70f99ff208e59844f2e0ba552046bff60e4f94e4020ce"
   end
 
   depends_on "cmake" => :build
